@@ -1,0 +1,404 @@
+@charset "UTF-8";
+
+/* font */
+
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Noto+Sans+KR:wght@100..900&display=swap");
+@font-face {
+  font-family: "S-CoreDream-3Light";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+h2 {
+  font-family: "Exo 2";
+}
+
+nav {
+  font-family: "Exo 2";
+  /* root */
+}
+.subMenu {
+  font-family: "S-CoreDream-3Light";
+}
+
+:root {
+  --colorBlack: #000;
+  --accentColor: #ff6600;
+  --colorWhite: #fff;
+  --colorSub1: #97999b;
+  --colorSub2: #262829;
+}
+
+body {
+  min-width: 1400px;
+  background: var(--colorBlack);
+}
+
+/* header */
+header {
+  display: flex;
+  height: 110px;
+  align-items: center;
+  color: white;
+  position: relative;
+}
+header h1 {
+  padding: 10px;
+}
+header h1 a img {
+  width: 92px;
+  height: 60px;
+  margin: 0 50px;
+}
+.header_logo {
+  width: 25px;
+}
+header .login {
+  flex-shrink: 0;
+  margin-right: 35px;
+  color: var(--colorSub1);
+  font-weight: bold;
+}
+header .login ul {
+  display: flex;
+}
+header .login ul li {
+  margin: 0 10px;
+}
+header .login ul li:hover {
+  color: white;
+}
+nav > ul > li:hover .subMenu:before {
+  position: absolute;
+  top: -2px;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: var(--accentColor);
+}
+/* nav */
+nav > ul {
+  display: flex;
+}
+nav > ul > li {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 110px;
+}
+.menu {
+  flex: 1;
+  margin-left: 150px;
+}
+nav > ul > li > a {
+  cursor: pointer;
+  font-size: 18px;
+  display: block;
+  align-items: center;
+  padding: 0 40px;
+  line-height: 100px;
+}
+
+nav > ul > li a:hover {
+  color: var(--accentColor);
+}
+
+/* sub menu */
+.subMenu {
+  display: none;
+  position: absolute;
+  z-index: 300;
+  background-color: rgba(0, 0, 0, 0.9);
+  top: 100%;
+  border-radius: 0 0 15px 15px;
+}
+nav > ul > li:hover .subMenu {
+  display: flex;
+}
+.subMenu a {
+  font-size: 16px;
+  display: inline-block;
+  padding: 20px 20px;
+  white-space: nowrap;
+}
+.subMenu a:hover {
+  background: inherit;
+}
+
+/* quick_sns */
+.quick_sns {
+  position: absolute;
+  z-index: 1000;
+  right: 50px;
+  top: 190px;
+  height: 2600px;
+}
+.quick_sns_wrap {
+  position: sticky;
+  top: 32%;
+}
+.quick_sns_wrap img {
+  width: 76px;
+  height: 76px;
+}
+.quick_sns_wrap > div {
+  border-radius: 50%;
+  margin: 5px 0;
+}
+.quick_sns_wrap:hover {
+  transform: scale(1.05);
+}
+.quick_sns_wrap > div:hover {
+  border: 3px solid var(--accentColor);
+  transform: scale(1.1);
+  background: black;
+  z-index: 999;
+}
+.quick_sns_wrap .chat:hover {
+  border: 3px solid var(--accentColor);
+  transform: scale(1.1);
+  background: #c39930;
+  z-index: 999;
+}
+
+/* visual */
+.visual {
+  position: relative;
+  /* height: 100vh; */
+}
+.background_image img {
+  object-fit: cover;
+  width: 100%;
+  height: 100vh;
+}
+.visual_logo {
+  position: absolute;
+  z-index: 10;
+  top: 350px;
+  left: calc(50% - 300px);
+}
+
+/* main */
+main {
+  position: relative;
+}
+section {
+  width: 1400px;
+  margin: auto;
+}
+section h2 {
+  padding: 30px 0;
+}
+
+.view_all {
+  border: 1px solid var(--colorSub1);
+  border-radius: 10px;
+  background: black;
+  display: flex;
+  width: 200px;
+  margin: auto;
+}
+.view_all a {
+  text-align: center;
+  padding: 20px;
+  font-family: "Exo 2";
+  color: white;
+  height: 60px;
+  width: 100%;
+}
+.view_all:hover {
+  background: var(--accentColor);
+  border: 1px solid transparent;
+}
+
+.gamedate > div {
+  position: absolute;
+  display: flex;
+  top: -100px;
+  z-index: 40;
+}
+.gamedate > div > div {
+  width: 310px;
+  height: 350px;
+  border-radius: 15px;
+  background: rgba(37, 40, 42, 0.7);
+  margin: 50px 20px;
+}
+.gamedate > div > div:hover {
+  border: 3px solid var(--accentColor);
+  transform: scale(1.1);
+}
+.gamedate > div > div:hover h3 {
+  border-bottom: 2px solid var(--accentColor);
+}
+.gamedate > div > div > a > h3 {
+  color: var(--accentColor);
+  font-size: 24px;
+  text-align: center;
+  font-family: "S-CoreDream-3Light";
+  border-bottom: 2px solid white;
+  line-height: 50px;
+  font-weight: 800;
+}
+
+.gamedate > div > div > a > p {
+  color: white;
+  font-size: 16px;
+  margin: 20px 0px 5px 23px;
+}
+
+.game_logo {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  position: relative;
+}
+.game_logo p {
+  color: white;
+  font-size: 24px;
+  font-family: "Exo 2";
+  text-align: center;
+  position: absolute;
+  top: 60px;
+}
+.game_logo img {
+  width: 100px;
+  height: 100px;
+  margin: 30px;
+}
+
+.gamedate .btn {
+  position: absolute;
+  left: calc(50% - 100px);
+  top: 360px;
+  z-index: 50;
+}
+
+section h2 {
+  color: white;
+  font-size: 28px;
+  display: inline-block;
+  margin-top: 580px;
+}
+
+.eaglestv > div {
+  display: flex;
+}
+
+.eaglestv > div > div {
+  width: 420px;
+  height: 235px;
+  margin: 0 22px;
+}
+.eaglestv > div > div:hover {
+  transform: scale(1.1);
+}
+.news {
+  position: relative;
+}
+.news h2 {
+  display: inline-block;
+  margin-top: 150px;
+}
+.news > div {
+  display: flex;
+}
+.news > div > div {
+  margin: 0 20px;
+  width: 300px;
+  height: 430px;
+}
+.news > div > div p {
+  color: white;
+  font-family: "S-CoreDream-3Light";
+  font-size: 14px;
+  line-height: 1.5;
+}
+.news > div > div h3 {
+  font-family: "S-CoreDream-3Light";
+  color: white;
+  font-size: 20px;
+  line-height: 1.2;
+}
+.news > div > div img {
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.news > div > div a.read_more {
+  color: var(--accentColor);
+  font-family: "Exo 2";
+  line-height: 20px;
+  font-size: 14px;
+  display: inline-block;
+  margin-top: 10px;
+  margin-left: 220px;
+}
+.news > div > div a:hover {
+  text-decoration: underline;
+}
+.news a.news_img img {
+  opacity: 0.5;
+}
+.news a.news_img img:hover {
+  opacity: 1;
+}
+
+/* footer */
+
+.footer_wrap {
+  border-top: 1px solid var(--colorSub2);
+  margin-top: 100px;
+  position: relative;
+  color: white;
+}
+.footer_top {
+  justify-content: space-between;
+  display: flex;
+  margin: 50px 100px 30px 100px;
+}
+.footer_bottom {
+  margin: 0 100px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer_bottom .address {
+  font-size: 14px;
+  color: var(--colorSub1);
+  line-height: 1.5;
+  margin-bottom: 50px;
+}
+.topBtn {
+  font-family: "Exo 2";
+  font-size: 20px;
+}
+.topBtn a {
+  display: block;
+  padding: 0 20px;
+}
+.topBtn img {
+  position: absolute;
+  right: 160px;
+  top: 51px;
+  height: 18px;
+  width: 14px;
+}
+.address ul {
+  display: flex;
+  margin-top: 20px;
+}
+.address ul li {
+  margin-right: 20px;
+}
+.address ul li:hover {
+  color: white;
+  text-decoration: underline;
+}
+.copyright {
+  color: white;
+  font-family: "Exo 2";
+  position: absolute;
+  right: 100px;
+  bottom: 50px;
+}
